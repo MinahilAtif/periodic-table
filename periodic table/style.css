@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f5ef;
+    color: #252b35;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #263b50;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #687481;
+    font-size: 16px;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.legend span {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(65px, 1fr));
+    grid-template-rows: repeat(10, 100px);
+    gap: 5px;
+    min-width: 1300px;
+    max-width: 1700px;
+    margin: auto;
+}
+
+.element {
+    grid-column: var(--col);
+    grid-row: var(--row);
+    border: 1px solid rgba(30, 40, 50, 0.12);
+    border-radius: 8px;
+    padding: 7px 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.element:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.element small {
+    align-self: flex-start;
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+.element strong {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.element p {
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* Element category colors */
+
+.alkali {
+    background: #f6b9b5;
+    color: #762d31;
+}
+
+.alkaline {
+    background: #f8d6a0;
+    color: #754b15;
+}
+
+.transition {
+    background: #c7d9f5;
+    color: #244c80;
+}
+
+.metalloid {
+    background: #c9e8bd;
+    color: #315d2c;
+}
+
+.nonmetal {
+    background: #a8e1dc;
+    color: #155a55;
+}
+
+.halogen {
+    background: #d8c6f4;
+    color: #55358a;
+}
+
+.noble {
+    background: #f2c5e2;
+    color: #853c70;
+}
+
+.other {
+    background: #d4d9df;
+    color: #394553;
+}
+
+.lanth {
+    background: #f5d2a8;
+    color: #794a1c;
+}
+
+.act {
+    background: #e9c1cb;
+    color: #77394a;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #687481;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .legend {
+        justify-content: flex-start;
+    }
+
+    .periodic-table {
+        margin-left: 0;
+    }
+}
